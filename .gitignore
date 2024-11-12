@@ -1,0 +1,51 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.sqlite3
+
+# Django
+db.sqlite3
+*.log
+media/
+staticfiles/
+
+# Environment variables
+.env
+
+# Docker
+*.log
+docker-compose.override.yml
+postgres_data/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# IDEs
+.idea/
+*.swp
+*.swo
+
+# Coverage reports
+htmlcov/
+*.cover
+.coverage
+*.lcov
+
+# Test and temporary files
+*.tmp
+*.bak
+*.old
