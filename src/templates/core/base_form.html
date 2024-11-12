@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="row justify-content-center w-100">
+      <h3 style="margin-bottom: 30px;" class="row justify-content-center">{% block form_header_name %}{% endblock form_header_name  %}</h3>
+      <div class="col-12 col-md-6 col-lg-4">
+        <form method="POST">
+          {% csrf_token %}
+  
+         {% block form %}{{ form|crispy }}{% endblock form %} 
+
+        <button type="submit" class="btn btn-primary w-100">{% block form_button_name %}{% endblock form_button_name %}</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

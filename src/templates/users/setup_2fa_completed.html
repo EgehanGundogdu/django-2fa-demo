@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}OTP Setup Complete{% endblock %}
+
+{% block content %}
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="text-center">
+    <h1 class="display-4 text-success fw-bold mb-4">OTP Setup Complete!</h1>
+    <p class="lead mb-4">Your OTP setup was successful. Your account is now secured with two-factor authentication.</p>
+    
+    <!-- Optional Success Icon -->
+    <div class="mb-4">
+      <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+    </div>
+
+    <!-- Centered Redirect Buttons -->
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="#" class="btn btn-primary btn-lg">Go to Home</a>
+      <a href="#" class="btn btn-outline-success btn-lg">Access Secret Page</a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

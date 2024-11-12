@@ -1,0 +1,33 @@
+{% extends 'core/base_form.html' %}
+{% load crispy_forms_tags %}
+
+{% block form_header_name %}
+  Setup your 2FA on Django OTP Example App
+{% endblock %}
+
+{% block form %}
+  <div class="text-center mb-4">
+    <div id="qrcode" class="d-flex justify-content-center"></div>
+  </div>
+  {{ form|crispy }}
+{% endblock %}
+
+{% block form_button_name %}
+  Complete your 2FA setup
+{% endblock %}
+
+{% block extra_js %}
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <script>
+    const otpUrl = '{{ provisioning_uri|escapejs }}'
+    new QRCode(document.getElementById('qrcode'), {
+      text: otpUrl,
+      width: 150,
+      height: 150,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.H
+    })
+  </script>
+{% endblock %}
